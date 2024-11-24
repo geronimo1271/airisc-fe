@@ -1,0 +1,1 @@
+export { default } from "file:///Users/gdalmaso/projects/airisc/airisc-fe/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
