@@ -52,7 +52,7 @@ interface _GlobalComponents {
     'FormInputPromoFilterCheckbox': typeof import("../components/form/input/PromoFilterCheckbox.vue")['default']
     'ModalsBaseModal': typeof import("../components/modals/BaseModal.vue")['default']
     'ModalsJobFiltersModal': typeof import("../components/modals/JobFiltersModal.vue")['default']
-    'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
+    'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
     'ClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -61,8 +61,8 @@ interface _GlobalComponents {
     'NuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'NuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
     'NuxtRouteAnnouncer': typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
-    'NuxtImg': typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-img")['default']
-    'NuxtPicture': typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-picture")['default']
+    'NuxtImg': typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
+    'NuxtPicture': typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
     'NuxtLinkLocale': typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
     'SwitchLocalePathLink': typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
     'NuxtIcon': typeof import("../node_modules/nuxt-icons/dist/runtime/components/nuxt-icon.vue")['default']
@@ -220,7 +220,7 @@ interface _GlobalComponents {
     'LazyFormInputPromoFilterCheckbox': typeof import("../components/form/input/PromoFilterCheckbox.vue")['default']
     'LazyModalsBaseModal': typeof import("../components/modals/BaseModal.vue")['default']
     'LazyModalsJobFiltersModal': typeof import("../components/modals/JobFiltersModal.vue")['default']
-    'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
+    'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'LazyNuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
     'LazyClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -229,8 +229,8 @@ interface _GlobalComponents {
     'LazyNuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'LazyNuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
     'LazyNuxtRouteAnnouncer': typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
-    'LazyNuxtImg': typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-img")['default']
-    'LazyNuxtPicture': typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-picture")['default']
+    'LazyNuxtImg': typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
+    'LazyNuxtPicture': typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
     'LazyNuxtLinkLocale': typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
     'LazySwitchLocalePathLink': typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
     'LazyNuxtIcon': typeof import("../node_modules/nuxt-icons/dist/runtime/components/nuxt-icon.vue")['default']
@@ -340,14 +340,6 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 }
 
-declare module '@vue/runtime-core' {
-  export interface GlobalComponents extends _GlobalComponents { }
-}
-
-declare module '@vue/runtime-dom' {
-  export interface GlobalComponents extends _GlobalComponents { }
-}
-
 declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
@@ -402,7 +394,7 @@ export const FormInputTextarea: typeof import("../components/form/input/InputTex
 export const FormInputPromoFilterCheckbox: typeof import("../components/form/input/PromoFilterCheckbox.vue")['default']
 export const ModalsBaseModal: typeof import("../components/modals/BaseModal.vue")['default']
 export const ModalsJobFiltersModal: typeof import("../components/modals/JobFiltersModal.vue")['default']
-export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
+export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
 export const ClientOnly: typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -411,8 +403,8 @@ export const ServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/com
 export const NuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
-export const NuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-img")['default']
-export const NuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-picture")['default']
+export const NuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
+export const NuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
 export const NuxtLinkLocale: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
 export const SwitchLocalePathLink: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
 export const NuxtIcon: typeof import("../node_modules/nuxt-icons/dist/runtime/components/nuxt-icon.vue")['default']
@@ -570,7 +562,7 @@ export const LazyFormInputTextarea: typeof import("../components/form/input/Inpu
 export const LazyFormInputPromoFilterCheckbox: typeof import("../components/form/input/PromoFilterCheckbox.vue")['default']
 export const LazyModalsBaseModal: typeof import("../components/modals/BaseModal.vue")['default']
 export const LazyModalsJobFiltersModal: typeof import("../components/modals/JobFiltersModal.vue")['default']
-export const LazyNuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
+export const LazyNuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const LazyNuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
 export const LazyClientOnly: typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -579,8 +571,8 @@ export const LazyServerPlaceholder: typeof import("../node_modules/nuxt/dist/app
 export const LazyNuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const LazyNuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
 export const LazyNuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
-export const LazyNuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-img")['default']
-export const LazyNuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/nuxt-picture")['default']
+export const LazyNuxtImg: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
+export const LazyNuxtPicture: typeof import("../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
 export const LazyNuxtLinkLocale: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
 export const LazySwitchLocalePathLink: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
 export const LazyNuxtIcon: typeof import("../node_modules/nuxt-icons/dist/runtime/components/nuxt-icon.vue")['default']

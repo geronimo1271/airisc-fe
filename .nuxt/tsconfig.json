@@ -2,6 +2,9 @@
 {
   "compilerOptions": {
     "paths": {
+      "nitropack/types": [
+        "../node_modules/nitropack/types"
+      ],
       "nitropack": [
         "../node_modules/nitropack"
       ],
@@ -25,9 +28,6 @@
       ],
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
-      ],
-      "@vue/runtime-dom": [
-        "../node_modules/@vue/runtime-dom"
       ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
@@ -62,6 +62,9 @@
       "@@/*": [
         "../*"
       ],
+      "#shared": [
+        "../shared"
+      ],
       "assets": [
         "../assets"
       ],
@@ -73,6 +76,12 @@
       ],
       "public/*": [
         "../public/*"
+      ],
+      "#build": [
+        "."
+      ],
+      "#build/*": [
+        "./*"
       ],
       "#app": [
         "../node_modules/nuxt/dist/app"
@@ -116,9 +125,6 @@
       "#i18n": [
         "../node_modules/@nuxtjs/i18n/dist/runtime/composables/index"
       ],
-      "#robots": [
-        "./robots"
-      ],
       "pinia": [
         "../node_modules/pinia/dist/pinia"
       ],
@@ -127,6 +133,9 @@
       ],
       "#primevue-style": [
         "./primevue-style.mjs"
+      ],
+      "vee-validate": [
+        "../node_modules/vee-validate/dist/vee-validate"
       ],
       "#font-loader": [
         "../node_modules/nuxt-font-loader/dist/runtime/composables"
@@ -141,13 +150,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev"
-      ],
-      "#build": [
-        "."
-      ],
-      "#build/*": [
-        "./*"
+        "./manifest/meta/118e759b-6a2b-4945-bb15-35fc70bb56a9.json"
       ],
       "#components": [
         "./components"
@@ -186,19 +189,33 @@
     "../.config/nuxt.*",
     "../**/*",
     "../node_modules/@nuxt/image/runtime",
+    "../node_modules/@nuxt/image/dist/runtime",
     "../node_modules/@nuxtjs/eslint-module/runtime",
+    "../node_modules/@nuxtjs/eslint-module/dist/runtime",
     "../node_modules/@nuxtjs/i18n/runtime",
+    "../node_modules/@nuxtjs/i18n/dist/runtime",
     "../node_modules/@nuxtjs/robots/runtime",
+    "../node_modules/@nuxtjs/robots/dist/runtime",
     "../node_modules/@nuxtjs/strapi/runtime",
+    "../node_modules/@nuxtjs/strapi/dist/runtime",
     "../node_modules/@nuxtjs/tailwindcss/runtime",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime",
     "../node_modules/@pinia/nuxt/runtime",
+    "../node_modules/@pinia/nuxt/dist/runtime",
     "../node_modules/@vueuse/nuxt/runtime",
+    "../node_modules/@vueuse/nuxt/dist/runtime",
     "../node_modules/nuxt-icons/runtime",
+    "../node_modules/nuxt-icons/dist/runtime",
     "../node_modules/nuxt-jsonld/runtime",
+    "../node_modules/nuxt-jsonld/dist/runtime",
     "../node_modules/nuxt-primevue/runtime",
+    "../node_modules/nuxt-primevue/dist/runtime",
     "../node_modules/@vee-validate/nuxt/runtime",
+    "../node_modules/@vee-validate/nuxt/dist/runtime",
     "../node_modules/nuxt-font-loader/runtime",
+    "../node_modules/nuxt-font-loader/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
+    "../node_modules/@nuxt/telemetry/dist/runtime",
     ".."
   ],
   "exclude": [
@@ -206,19 +223,33 @@
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxt/image/dist/runtime/server",
     "../node_modules/@nuxtjs/eslint-module/runtime/server",
+    "../node_modules/@nuxtjs/eslint-module/dist/runtime/server",
     "../node_modules/@nuxtjs/i18n/runtime/server",
+    "../node_modules/@nuxtjs/i18n/dist/runtime/server",
     "../node_modules/@nuxtjs/robots/runtime/server",
+    "../node_modules/@nuxtjs/robots/dist/runtime/server",
     "../node_modules/@nuxtjs/strapi/runtime/server",
+    "../node_modules/@nuxtjs/strapi/dist/runtime/server",
     "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime/server",
     "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia/nuxt/dist/runtime/server",
     "../node_modules/@vueuse/nuxt/runtime/server",
+    "../node_modules/@vueuse/nuxt/dist/runtime/server",
     "../node_modules/nuxt-icons/runtime/server",
+    "../node_modules/nuxt-icons/dist/runtime/server",
     "../node_modules/nuxt-jsonld/runtime/server",
+    "../node_modules/nuxt-jsonld/dist/runtime/server",
     "../node_modules/nuxt-primevue/runtime/server",
+    "../node_modules/nuxt-primevue/dist/runtime/server",
     "../node_modules/@vee-validate/nuxt/runtime/server",
+    "../node_modules/@vee-validate/nuxt/dist/runtime/server",
     "../node_modules/nuxt-font-loader/runtime/server",
+    "../node_modules/nuxt-font-loader/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
+    "../node_modules/@nuxt/telemetry/dist/runtime/server",
     "../.output"
   ]
 }

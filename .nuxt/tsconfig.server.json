@@ -32,6 +32,9 @@
         "../*",
         "../*"
       ],
+      "nitropack/types": [
+        "../node_modules/nitropack/types"
+      ],
       "nitropack": [
         "../node_modules/nitropack"
       ],
@@ -56,9 +59,6 @@
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
       ],
-      "@vue/runtime-dom": [
-        "../node_modules/@vue/runtime-dom"
-      ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
       ],
@@ -67,9 +67,6 @@
       ],
       "nuxt": [
         "../node_modules/nuxt"
-      ],
-      "#internal/nuxt/paths": [
-        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
         "./.."
@@ -83,6 +80,9 @@
       "@@": [
         "./.."
       ],
+      "#shared": [
+        "../shared"
+      ],
       "assets": [
         "../assets"
       ],
@@ -94,6 +94,15 @@
       ],
       "public/*": [
         "../public/*"
+      ],
+      "#build": [
+        "./"
+      ],
+      "#build/*": [
+        "./*"
+      ],
+      "#internal/nuxt/paths": [
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "#image": [
         "../node_modules/@nuxt/image/dist/runtime"
@@ -128,9 +137,6 @@
       "#i18n": [
         "../node_modules/@nuxtjs/i18n/dist/runtime/composables/index"
       ],
-      "#robots": [
-        "./robots"
-      ],
       "pinia": [
         "../node_modules/pinia/dist/pinia"
       ],
@@ -139,6 +145,9 @@
       ],
       "#primevue-style": [
         "./primevue-style"
+      ],
+      "vee-validate": [
+        "../node_modules/vee-validate/dist/vee-validate"
       ],
       "#font-loader": [
         "../node_modules/nuxt-font-loader/dist/runtime/composables"

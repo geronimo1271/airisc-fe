@@ -1,21 +1,4 @@
 {
-  "extends": "@strapi/typescript-utils/tsconfigs/server",
-  "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": ".",
-    "sourceMap": true
-  },
-  "include": ["./", "./**/*.ts", "./**/*.js", "src/**/*.json"],
-  "exclude": [
-    "node_modules/",
-    "build/",
-    "dist/",
-    ".cache/",
-    ".tmp/",
-    "src/admin/",
-    "**/*.test.*",
-    "src/plugins/**",
-    "src/extensions/documentation/documentation/**/*.*",
-    "public/"
-  ]
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }
