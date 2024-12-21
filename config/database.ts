@@ -35,7 +35,7 @@ export default () => {
         host: env('DATABASE_HOST', '127.0.0.1'),
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'airisc_strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
+        user: env('DATABASE_USERNAME', 'nivorago'),
         password: env('DATABASE_PASSWORD', 'Giorgio77!'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
