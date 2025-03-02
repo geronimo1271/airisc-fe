@@ -4,15 +4,17 @@ module.exports = (shipit) => {
   require("shipit-deploy")(shipit);
 
   const repositoryUrlPrefix =
-    process.env.DEPLOY_ENV === "gitlab"
-      ? `https://gitlab-ci-token:${process.env.CI_JOB_TOKEN}@git.develondigital.com/`
-      : "git@git.develondigital.com:";
+    process.env.DEPLOY_ENV === 'gitlab'
+      ? 'git@github.com:'
+      : 'git@github.com:';
 
-  const repositoryUrl = "livigno/live-and-work-fe.git";
+  const repositoryUrl = 'geronimo1271/airisc-fe.git';
 
   shipit.initConfig({
     default: {
       repositoryUrl: `${repositoryUrlPrefix}${repositoryUrl}`,
+      keepReleases: 3,
+      keepWorkspace: false,
       ignores: [
         ".gitignore",
         ".git",
@@ -21,23 +23,23 @@ module.exports = (shipit) => {
         ".nuxt",
         ".output",
       ],
-      keepReleases: 3,
-      keepWorkspace: false,
       deleteOnRollback: false,
     },
     staging: {
-      deployTo: "/space/htdocs/crewfe",
-      servers: "crewfe@34.159.16.110",
-      branch: "staging",
-      port: 3005,
+      deployTo: '/home/airisc-fe/airisc-fe',
+      servers: 'airisc-fe@204.216.223.58',
+      branch: 'main',
+      port: 3000,
     },
     production: {
-      deployTo: "",
-      servers: "",
-      branch: "master",
-      port: 3005,
+      deployTo: '/home/airisc-fe/airisc-fe',
+      servers: 'airisc-fe@204.216.223.58',
+      branch: 'main',
+      port: 3000,
     },
   });
+
+
 
   // TASKS DEFINITION
 
