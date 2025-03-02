@@ -137,7 +137,7 @@ export default defineNuxtConfig({
       strapiV4: {
         provider: "~/misc/strapiV4-nuxtImage-provider",
         options: {
-          baseURL: process.env.STRAPI_URL || "http://localhost:3002",
+          baseURL: process.env.STRAPI_URL || "http://localhost:3000",
         },
       },
     },

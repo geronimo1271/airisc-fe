@@ -4,7 +4,7 @@ import type { ProviderGetImage } from "@nuxt/image";
 
 export const getImage: ProviderGetImage = (
   src,
-  { modifiers, baseURL = "http://localhost:3002/uploads" } = {},
+  { modifiers, baseURL = "http://localhost:3000/uploads" } = {},
 ) => {
   const { breakpoint = "", sharp = {} } = modifiers || {};
 
