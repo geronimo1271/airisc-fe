@@ -231,6 +231,7 @@ declare global {
   const useFocus: typeof import('@vueuse/core')['useFocus']
   const useFocusWithin: typeof import('@vueuse/core')['useFocusWithin']
   const useForm: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useForm']
+  const useFormContext: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormContext']
   const useFormErrors: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormErrors']
   const useFormValues: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormValues']
   const useFps: typeof import('@vueuse/core')['useFps']
@@ -255,6 +256,7 @@ declare global {
   const useIsFormTouched: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsFormTouched']
   const useIsFormValid: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsFormValid']
   const useIsSubmitting: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsSubmitting']
+  const useIsValidating: typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsValidating']
   const useJobFilters: typeof import('../../composables/useJobFilters')['useJobFilters']
   const useJsonld: typeof import('../../node_modules/nuxt-jsonld/dist/runtime/composable')['useJsonld']
   const useKeyModifier: typeof import('@vueuse/core')['useKeyModifier']
@@ -446,7 +448,7 @@ declare global {
 // for type re-export
 declare global {
   // @ts-ignore
-  export type { Component, ComponentPublicInstance, ComputedRef, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode } from 'vue'
+  export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
   export type { CtaTarget } from '../../composables/useCtaTarget'
@@ -689,6 +691,7 @@ declare module 'vue' {
     readonly useFocus: UnwrapRef<typeof import('@vueuse/core')['useFocus']>
     readonly useFocusWithin: UnwrapRef<typeof import('@vueuse/core')['useFocusWithin']>
     readonly useForm: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useForm']>
+    readonly useFormContext: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormContext']>
     readonly useFormErrors: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormErrors']>
     readonly useFormValues: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useFormValues']>
     readonly useFps: UnwrapRef<typeof import('@vueuse/core')['useFps']>
@@ -713,6 +716,7 @@ declare module 'vue' {
     readonly useIsFormTouched: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsFormTouched']>
     readonly useIsFormValid: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsFormValid']>
     readonly useIsSubmitting: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsSubmitting']>
+    readonly useIsValidating: UnwrapRef<typeof import('../../node_modules/vee-validate/dist/vee-validate')['useIsValidating']>
     readonly useJobFilters: UnwrapRef<typeof import('../../composables/useJobFilters')['useJobFilters']>
     readonly useJsonld: UnwrapRef<typeof import('../../node_modules/nuxt-jsonld/dist/runtime/composable')['useJsonld']>
     readonly useKeyModifier: UnwrapRef<typeof import('@vueuse/core')['useKeyModifier']>

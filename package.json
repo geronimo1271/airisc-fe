@@ -1,10 +1,9 @@
 {
-  "name": "nuxt-app",
+  "name": "airisc-site",
   "private": true,
   "type": "module",
-  "author": "Develon Digiatal <developers@develondigital.com> (https://www.develondigital.com/)",
+  "author": "Giorgio Dal Maso <giorgio.dalmaso@airisc.org>",
   "contributors": [
-    "Marco Busellato <marco.busellato@develondigital.com>"
   ],
   "scripts": {
     "build": "nuxt build",
