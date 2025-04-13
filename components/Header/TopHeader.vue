@@ -5,7 +5,7 @@
       class="rounded-br-3xl rounded-tr-3xl bg-guild-700 px-8 py-4 text-xs-1 font-bold text-white"
     >
       <a
-        href="https://www.livigno.eu"
+        href="https://www.airisc.org"
         target="_blank"
         class="flex items-center"
       >
