@@ -23,7 +23,7 @@
           <img
             src="~/assets/icons/logo_airisc_home.png"
             alt="Logo"
-            class="h-24 w-auto"
+            class="h-18 w-auto"
           />
           <!-- SvgIcon class="lg:hidden" name="logo-menu-mobile" />
           <SvgIcon class="hidden lg:block" name="logo-menu-desktop" / -->
