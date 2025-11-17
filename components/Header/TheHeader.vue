@@ -25,8 +25,8 @@
             alt="Logo"
             class="h-18 w-auto"
           />
-          <!-- SvgIcon class="lg:hidden" name="logo-menu-mobile" />
-          <SvgIcon class="hidden lg:block" name="logo-menu-desktop" / -->
+          <!-- SvgIcon class="lg:hidden" name="logo-menu-mobile" / -->
+          <!-- SvgIcon class="hidden lg:block" name="logo-menu-desktop" / -->
         </NuxtLinkLocale>
       </div>
       <div

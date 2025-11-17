@@ -1,56 +1,34 @@
 <template>
   <section>
     <form @submit.prevent="onSubmit">
-      <InputText
-        form-name="contact-us"
-        field="name"
-        class="!mt-5"
-        :label="$t('form.contact.labels.name')"
-      />
-      <InputText
-        form-name="contact-us"
-        field="surname"
-        class="!mt-5"
-        :label="$t('form.contact.labels.surname')"
-      />
-      <InputText
-        form-name="contact-us"
-        field="email"
-        class="!mt-5"
-        :label="$t('form.contact.labels.email')"
-        type="email"
-      />
+      <InputText form-name="contact-us" field="name" class="!mt-5" :label="$t('form.contact.labels.name')" />
+      <InputText form-name="contact-us" field="surname" class="!mt-5" :label="$t('form.contact.labels.surname')" />
+      <InputText form-name="contact-us" field="email" class="!mt-5" :label="$t('form.contact.labels.email')"
+        type="email" />
       <div class="mt-5 flex flex-wrap items-start xs2:flex-nowrap">
-        <InputNumber
-          form-name="contact-us"
-          field="prefix"
-          class="!mt-0 mr-4 w-full shrink-0 xs2:w-28"
-          :label="$t('form.contact.labels.prefix')"
-          :min-digits="1"
-          :max-digits="3"
-          prefix="+"
-        />
-        <InputNumber
-          form-name="contact-us"
-          field="phone"
-          class="mt-5 w-full xs2:!mt-0"
-          :label="$t('form.contact.labels.phone')"
-          :min-digits="10"
-          :max-digits="10"
-        />
+        <InputNumber form-name="contact-us" field="prefix" class="!mt-0 mr-4 w-full shrink-0 xs2:w-28"
+          :label="$t('form.contact.labels.prefix')" :min-digits="1" :max-digits="3" prefix="+" />
+        <InputNumber form-name="contact-us" field="phone" class="mt-5 w-full xs2:!mt-0"
+          :label="$t('form.contact.labels.phone')" :min-digits="10" :max-digits="10" />
       </div>
-      <InputSelect
-        form-name="contact-us"
-        field="type"
-        :label="$t('form.contact.labels.type')"
-        :items="contactUsConfiguration?.contact_assistance_types || []"
-      />
-      <InputTextarea
-        form-name="contact-us"
-        field="text"
-        class="!mt-5"
-        :label="$t('form.contact.labels.text')"
-      />
+      <InputSelect form-name="contact-us" field="type" :label="$t('form.contact.labels.type')" :items="contactUsConfiguration?.contact_assistance_types || [
+        {
+          value: 'richiesta_assistenza',
+          label: 'Ho bisogno di assistenza'
+        },
+        {
+          value: 'segnalazione_problema',
+          label: 'Vorrei segnalare un problema'
+        },
+        {
+          value: 'richiesta_informazioni',
+          label: 'Vorrei avere più informazioni'
+        },
+        {
+          value: 'altro',
+          label: 'Altro'
+        }]" />
+      <InputTextarea form-name="contact-us" field="text" class="!mt-5" :label="$t('form.contact.labels.text')" />
       <div class="mt-5 text-right">
         <button type="submit" class="btn-secondary w-full lg:w-auto">
           {{ $t("form.contact.labels.submit") }}
