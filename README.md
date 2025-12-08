@@ -73,3 +73,18 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+on server  opc
+sudo -i
+/home/opc/apps/airisc-fe
+
+yarn install
+yarn build
+
+systemctl status airisc-fe
+systemctl stop airisc-fe
+systemctl start airisc-fe
+
+
+systemctl stop airisc-fe.service
