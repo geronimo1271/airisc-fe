@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-bold text-guild-700;
 }
 
+html, body {
+  @apply overflow-x-hidden;
+}
+
 h1 {
   @apply text-xl-2 lg:text-xxl-1;
 }
@@ -27,6 +31,10 @@ h3 {
 
 .btn-tertiary {
   @apply inline-block text-center text-blue-500 text-m-1 font-bold relative after:content-[''] after:absolute after:w-full after:h-[1px] after:left-0 after:-bottom-[1px] after:bg-blue-500;
+}
+
+.btn-link {
+  @apply inline-block rounded-lg bg-guildtext-500 text-xs-2 text-center text-white h-max px-3 py-1.5;
 }
 
 .btn-icon {

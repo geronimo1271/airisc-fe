@@ -2,14 +2,9 @@
   <header ref="header" class="bg-red-100 fixed left-0 top-0 z-50 w-full">
     <TopHeader class="hidden md:flex" />
     <section
-      class="grid grid-cols-4 gap-x-4 bg-white p-4 md:grid-cols-12 md:gap-x-8 md:bg-white md:px-8 md:py-2"
+      class="grid grid-cols-8 gap-x-4 bg-white p-4 md:grid-cols-12 md:gap-x-8 md:bg-white md:px-8 md:py-2"
     >
-      <div
-        class="col-span-1 flex items-center lg:order-last lg:justify-end 2xl:col-span-2"
-      >
-        <LangSwitcher />
-      </div>
-      <div class="col-span-5 md:order-first md:col-span-4 2xl:col-span-4">
+      <div class="col-span-6 md:order-first md:col-span-4 2xl:col-span-4">
         <NuxtLinkLocale
           :to="{ name: 'index' }"
           @click="
@@ -23,11 +18,14 @@
           <img
             src="~/assets/icons/logo_airisc_home.png"
             alt="Logo"
-            class="h-18 w-auto"
+            class="block w-[90%] mx-[5%] h-auto"
           />
-          <!-- SvgIcon class="lg:hidden" name="logo-menu-mobile" / -->
-          <!-- SvgIcon class="hidden lg:block" name="logo-menu-desktop" / -->
         </NuxtLinkLocale>
+      </div>
+      <div
+        class="col-span-1 flex items-center lg:order-last lg:justify-end 2xl:col-span-2"
+      >
+        <LangSwitcher />
       </div>
       <div
         class="col-span-1 flex items-center justify-end md:col-span-7 md:justify-center xl:justify-start 2xl:justify-center"

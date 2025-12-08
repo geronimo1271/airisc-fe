@@ -1,7 +1,13 @@
 <template>
   <section>
-    <button type="button" :aria-label="$t('menus.hamburger_aria_label')" @click="isMenuOpen = !isMenuOpen">
-      <SvgIcon name="hamburger-menu" />
+    <button
+      type="button"
+      :aria-label="$t('menus.hamburger_aria_label')"
+      @click="isMenuOpen = !isMenuOpen"
+      class="p-2 -m-2 flex flex-col items-center leading-none"
+    >
+      <SvgIcon name="hamburger-menu" class="w-7 h-7 text-blue-500" />
+      <span class="mt-0.5 text-xs-1 text-blue-500">MENU</span>
     </button>
 
     <ClientOnly>
@@ -17,8 +23,8 @@
                     <span class="text-inherit" v-html="$t('top_header.web_site')" />
                     <SvgIcon class="ml-3" name="sito-web" />
                   </a>
-                </div>
-                <SvgIcon name="close-menu" @click="isMenuOpen = !isMenuOpen" />
+              </div>
+              <SvgIcon name="close-menu" class="w-7 h-7 text-blue-500" @click="isMenuOpen = !isMenuOpen" />
               </div>
 
               <div class="mt-14">

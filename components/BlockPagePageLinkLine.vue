@@ -1,22 +1,18 @@
 <template>
-  <section class="flex flex-row justify-between">
-    <div class="px-8 py-4 text-xs-1 font-bold text-white">
+  <section class="flex flex-row items-center w-auto mx-3 mb-2 gap-8 h-max font-extrabold">
+    <div class="flex-1 text-xs-1 text-white h-max">
       <NuxtLink
         v-if="prev_page_label && prev_page_link"
         :to="prev_page_link"
-        class="text-2xl bg-gray-300 rounded border px-6 py-2 font-bold text-guildtext-700"
-      >
-        {{ prev_page_label }}
-      </NuxtLink>
+        class="block w-full btn-link"
+      > <span class="text-nowrap text-white" v-html="prev_page_label"></span></NuxtLink>
     </div>
-    <div class="px-8 py-4 text-xs-1 font-bold text-white">
+    <div class="flex-1 text-xs-1 text-white h-max">
       <NuxtLink
         v-if="next_page_label && next_page_link"
         :to="next_page_link"
-        class="text-2xl bg-gray-300 rounded border px-6 py-2 font-bold text-guildtext-700"
-      >
-        {{ next_page_label }}
-      </NuxtLink>
+        class="block w-full btn-link"
+      ><span class="text-nowrap text-white" v-html="next_page_label"></span></NuxtLink>
     </div>
   </section>
 </template>

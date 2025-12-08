@@ -2,13 +2,13 @@
   <section class="my-8 px-4 lg:my-16 lg:px-8">
     <div class="mx-auto grid max-w-[1476px] grid-cols-12 gap-x-4 lg:gap-x-8">
       <div class="col-span-12">
-        <div v-if="title || description" class="flex flex-col items-center">
+        <div v-if="title || description" class="flex flex-col items-start">
           <h3 v-if="title" class="w-full max-w-[900px] text-left">
             {{ title }}
           </h3>
           <div
             v-if="description"
-            class="my-6 max-w-[900px] text-justify font-medium lg:text-m-3"
+            class="text-wrapper my-6 max-w-[900px] text-left font-medium lg:text-m-3"
             v-html="description"
           />
           <div class="w-full lg:pt-6" :class="imageClasses">
@@ -53,7 +53,7 @@
               </template>
             </div>
           </div>
-          <div v-if="link?.cta_label && link?.cta_link" class="mt-10">
+          <div v-if="link?.cta_label && link?.cta_link" class="mt-1">
             <NuxtLink
               :to="useCtaLink(link.cta_link)"
               :target="useCtaTarget(link.cta_target)"
@@ -156,3 +156,20 @@ const imageClasses = computed(() => {
   return [baseClasses, orderClasses];
 });
 </script>
+
+<style scoped>
+/* Abilita i bullet nelle liste del contenuto HTML */
+::v-deep(.text-wrapper ul) {
+  @apply list-disc pl-6;
+}
+::v-deep(.text-wrapper ol) {
+  @apply list-decimal pl-6;
+}
+::v-deep(.text-wrapper li) {
+  @apply list-item;
+}
+/* Spazio dopo i paragrafi (circa mezza riga) */
+::v-deep(.text-wrapper p) {
+  margin-bottom: 0.5em;
+}
+</style>
