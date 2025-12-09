@@ -14,6 +14,7 @@
             :items="testimonials.data"
             :swiper-options="sliderTestimonialOptions"
             slide-classes="mb-16 mt-1"
+
           >
             <div
               class="flex h-full flex-col border-[10px] border-solid border-blue-100 p-7"
