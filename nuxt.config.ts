@@ -17,6 +17,12 @@ export default defineNuxtConfig({
           href: "/public/favicon.ico",
         },
       ],
+      script: [
+        {
+          type: "text/javascript",
+          src: "https://embeds.iubenda.com/widgets/6c5d5beb-bb8f-4308-acb9-c49fd575b4b1.js",
+        },
+      ],
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
