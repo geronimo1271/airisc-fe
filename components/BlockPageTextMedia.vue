@@ -6,7 +6,7 @@
           <h1 v-if="title" class="text-center">{{ title }}</h1>
           <div
             v-if="text"
-            class="my-6 max-w-[900px] font-medium lg:text-m-3"
+            class="text-wrapper my-6 max-w-[900px] font-medium lg:text-m-3"
             v-html="text"
           />
         </div>

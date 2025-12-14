@@ -59,6 +59,21 @@ export default defineNuxtConfig({
         family: "Livigno",
         weight: "700",
       },
+      {
+        src: "/fonts/ProximaSoftRegular.ttf",
+        family: "ProximaSoft-Regular",
+        weight: "400",
+      },
+      {
+        src: "/fonts/ProximaSoftMedium.ttf",
+        family: "ProximaSoft-Regular",
+        weight: "500",
+      },
+      {
+        src: "/fonts/ProximaSoftBold.ttf",
+        family: "ProximaSoft-Regular",
+        weight: "700",
+      },
     ],
   },
 

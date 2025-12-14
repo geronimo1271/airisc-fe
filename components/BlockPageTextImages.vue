@@ -54,7 +54,7 @@
         </div>
         <div class="w-full lg:pt-6" :class="imageClasses">
           <h2 v-if="title" class="uppercase" v-html="title" />
-          <div v-if="description" class="mt-6" v-html="description" />
+          <div v-if="description" class="text-wrapper mt-6" v-html="description" />
           <div v-if="link?.cta_label && link?.cta_link" class="mt-10">
             <NuxtLink
               :to="useCtaLink(link.cta_link)"

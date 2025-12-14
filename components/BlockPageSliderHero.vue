@@ -16,7 +16,7 @@
           <h1 v-if="item.title" class="text-white" v-html="item.title" />
           <div
             v-if="item.description"
-            class="hero-section__desc py-8 font-medium lg:px-40 lg:text-l-3"
+            class="text-wrapper hero-section__desc py-8 font-medium lg:px-40 lg:text-l-3"
             v-html="item.description"
           />
           <div v-if="item.links" class="my-8 flex hidden lg:block">

@@ -6,7 +6,7 @@
 
 <style>
 * {
-  font-family: "ProximaSoft-Regular", sans-serif;
+  font-family: "ProximaSoft-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   @apply text-grey-600;
 }
 

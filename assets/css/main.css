@@ -1,3 +1,60 @@
+/* Font Face Definitions - ProximaSoft */
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftThin.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftLight.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftSemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaSoft-Regular";
+  src: url("/fonts/ProximaSoftExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold text-guild-700;
 }
@@ -146,4 +203,71 @@ h3 {
 .p-toast-message-error .p-toast-detail,
 .p-toast-message-error .p-toast-summary {
   @apply text-white;
+}
+
+/* Stili per contenuti HTML di CKEditor */
+/* Assicura che tutti i contenuti HTML ereditino il font corretto */
+[class*="text-wrapper"],
+[class*="text-wrapper"] *,
+div[v-html],
+div[v-html] *,
+p[v-html],
+p[v-html] *,
+h1[v-html],
+h1[v-html] *,
+h2[v-html],
+h2[v-html] *,
+h3[v-html],
+h3[v-html] * {
+  font-family: "ProximaSoft-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Stili specifici per contenuti CKEditor */
+.text-wrapper,
+.text-wrapper p,
+.text-wrapper div,
+.text-wrapper span,
+.text-wrapper li,
+.text-wrapper ul,
+.text-wrapper ol,
+.text-wrapper a,
+.text-wrapper strong,
+.text-wrapper em,
+.text-wrapper h1,
+.text-wrapper h2,
+.text-wrapper h3,
+.text-wrapper h4,
+.text-wrapper h5,
+.text-wrapper h6 {
+  font-family: "ProximaSoft-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Rimuove eventuali stili inline di font-family da CKEditor */
+.text-wrapper [style*="font-family"],
+div[v-html] [style*="font-family"],
+p[v-html] [style*="font-family"] {
+  font-family: "ProximaSoft-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Migliora la leggibilità dei contenuti HTML */
+.text-wrapper {
+  line-height: 1.6;
+}
+
+.text-wrapper p {
+  margin-bottom: 0.7em;
+}
+
+.text-wrapper ul,
+.text-wrapper ol {
+  @apply list-disc pl-6;
+}
+
+.text-wrapper ol {
+  list-style-type: decimal;
+}
+
+.text-wrapper li {
+  @apply list-item;
+  margin-bottom: 0.3em;
 }
