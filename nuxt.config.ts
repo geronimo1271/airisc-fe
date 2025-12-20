@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
-      STRAPI_URL: process.env.STRAPI_URL || "https://airisc-admin.intelligenzanaturale.com",
     },
   },
 
