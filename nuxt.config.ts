@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+      STRAPI_URL: process.env.NUXT_PUBLIC_STRAPI_URL || process.env.STRAPI_URL || "https://airisc-admin.intelligenzanaturale.com",
     },
   },
 
@@ -14,13 +15,17 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "shortcut icon",
-          href: "/public/favicon.ico",
+          href: "/favicon.ico",
         },
       ],
       script: [
         {
           type: "text/javascript",
           src: "https://embeds.iubenda.com/widgets/6c5d5beb-bb8f-4308-acb9-c49fd575b4b1.js",
+        },
+        {
+          type: "text/javascript",
+          src: "https://cdn.iubenda.com/iubenda.js",
         },
       ],
     },
@@ -157,9 +162,6 @@ export default defineNuxtConfig({
     providers: {
       strapiV4: {
         provider: "~/misc/strapiV4-nuxtImage-provider",
-        options: {
-          baseURL: process.env.STRAPI_URL || "http://localhost:3000",
-        },
       },
     },
   },

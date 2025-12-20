@@ -2,10 +2,14 @@
 
 import type { ProviderGetImage } from "@nuxt/image";
 
-export const getImage: ProviderGetImage = (
-  src,
-  { modifiers, baseURL = "http://localhost:3000/uploads" } = {},
-) => {
+export const getImage: ProviderGetImage = (src, { modifiers } = {}) => {
+  const config = useRuntimeConfig();
+  const strapiUrl = config.public.STRAPI_URL || "https://airisc-admin.intelligenzanaturale.com";
+  // Assicuriamoci che l'URL non finisca con /uploads se non necessario
+  const baseURL = strapiUrl.endsWith("/uploads") 
+    ? strapiUrl 
+    : `${strapiUrl}/uploads`;
+
   const { breakpoint = "", sharp = {} } = modifiers || {};
 
   const query = new URLSearchParams(sharp);
