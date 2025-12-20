@@ -1,3 +1,4 @@
-const strapi = require("@strapi/strapi");
-const app = strapi({ distDir: "./dist" });
+import strapi from "@strapi/strapi";
+import { config } from "./config/server.js";
+const app = strapi({ config });
 app.start();

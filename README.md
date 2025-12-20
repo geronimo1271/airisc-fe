@@ -88,3 +88,12 @@ systemctl start airisc-fe
 
 
 systemctl stop airisc-fe.service
+
+
+
+IUBENDA
+
+https://www.iubenda.com/app/it/flow/4350428#/
+
+giorgio.dalmaso@intelligenzanaturale.com
+come cassa01.cremona

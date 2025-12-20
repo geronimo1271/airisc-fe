@@ -20,38 +20,14 @@
             v-if="footerData?.data?.attributes.privacy_policy_url"
             class="mx-2 lg:mx-6"
           >
-            <NuxtLink
-              :to="useCtaLink(footerData?.data.attributes.privacy_policy_url)"
-              class="text-s-1 text-blue-500 md:text-m-1"
-            >
-              Privacy Policy
-            </NuxtLink>
+          <a href="https://www.iubenda.com/privacy-policy/21450133" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
           </li>
           <li
             v-if="footerData?.data?.attributes.cookies_policy_url"
             class="mx-2 lg:mx-6"
           >
-            <NuxtLink
-              :to="useCtaLink(footerData?.data.attributes.cookies_policy_url)"
-              class="text-s-1 text-blue-500 md:text-m-1"
-            >
-              Cookies
-            </NuxtLink>
-          </li>
-          <li
-            v-if="
-              footerData?.data &&
-              footerData?.data.attributes.terms_of_service_url
-            "
-            class="mx-2 lg:mx-6"
-          >
-            <NuxtLink
-              :to="useCtaLink(footerData?.data.attributes.terms_of_service_url)"
-              class="text-s-1 text-blue-500 md:text-m-1"
-            >
-              Terms of service
-            </NuxtLink>
-          </li>
+          <a href="https://www.iubenda.com/privacy-policy/21450133/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a>
+        </li>
         </ul>
         <div class="mt-3 w-full flex justify-center text-center lg:mt-0">
           <a
@@ -95,4 +71,7 @@ const { data: footerData } = await useAsyncData(
     watch: [locale],
   },
 );
+
+// const loadIubenda = (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);
+
 </script>
