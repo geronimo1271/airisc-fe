@@ -300,8 +300,6 @@ declare module 'nuxt/schema' {
   interface PublicRuntimeConfig {
    RECAPTCHA_SITE_KEY: string,
 
-   STRAPI_URL: string,
-
    i18n: {
       baseUrl: string,
 
