@@ -33,3 +33,5 @@ images[0].save(
 print("Favicon.ico creato con successo!")
 
 
+
+
