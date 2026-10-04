@@ -32,7 +32,11 @@ export const useStrapiMediaObject = () => {
     modifiers = {},
   ) => {
     const mediaUrl =
-      typeof media === "object" ? getMediaBaseUrl(media) : String(media);
+      typeof media === "object"
+        ? getMediaBaseUrl(media)
+        : media
+          ? String(media)
+          : undefined;
     return mediaUrl ? img(mediaUrl, modifiers) : undefined;
   };
 

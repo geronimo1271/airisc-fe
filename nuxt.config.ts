@@ -157,7 +157,8 @@ export default defineNuxtConfig({
   },
 
   strapi: {
-    url: "https://airisc-admin.intelligenzanaturale.com",
+    url:
+      process.env.STRAPI_URL || "https://airisc-admin.intelligenzanaturale.com",
     prefix: "/api",
     version: "v4",
   },
@@ -169,7 +170,10 @@ export default defineNuxtConfig({
       strapiV4: {
         provider: "~/misc/strapiV4-nuxtImage-provider",
         options: {
-          baseURL: "https://airisc-admin.intelligenzanaturale.com",
+          baseURL:
+            process.env.STRAPI_PUBLIC_URL ??
+            process.env.STRAPI_URL ??
+            "https://airisc-admin.intelligenzanaturale.com",
         },
       },
     },

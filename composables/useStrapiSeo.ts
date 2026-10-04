@@ -65,17 +65,24 @@ export const useStrapiSeo = (seo: ComputedRef<Seo | null | undefined>) => {
   const { locale } = useI18n();
   const alternateLocale = computed(() => (locale.value === "it" ? "en" : "it"));
 
+  const canonicalLink = computed(
+    () => `${seo.value?.canonicalURL || ""}${route.fullPath}`,
+  );
+
   useHead({
     link: [
       {
         rel: "canonical",
-        href: computed(() => seo.value?.canonicalURL + route.fullPath),
+        href: canonicalLink,
       },
       {
         rel: "alternate",
-        href: computed(
-          () => seo.value?.canonicalURL + route.fullPath,
-        ).value.replace(`/${locale.value}`, `/${alternateLocale.value}`),
+        href: computed(() =>
+          canonicalLink.value.replace(
+            `/${locale.value}`,
+            `/${alternateLocale.value}`,
+          ),
+        ),
       },
     ],
   });

@@ -17,6 +17,12 @@ export const getImage: ProviderGetImage = (
     path = src.replace(/\/uploads\/(.*)$/gim, `/uploads/${breakpoint}_$1`);
   }
 
+  if (!baseURL || !/^https?:\/\//i.test(baseURL)) {
+    return {
+      url: path,
+    };
+  }
+
   const url = new URL(path, baseURL);
 
   url.search = query.toString();
