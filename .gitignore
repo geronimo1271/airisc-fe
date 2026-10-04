@@ -95,3 +95,4 @@ sw.*
 
 # Nuxt output directory
 .nuxt
+.DS_Store
